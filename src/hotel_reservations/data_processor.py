@@ -49,7 +49,7 @@ class DataProcessor:
         self.df = self.df[relevant_columns]
 
         # make the id columns as a string
-        for col in self.id_column:
+        for col in self.config.id_column:
             self.df[col] = self.df[col].astype(str)
 
     def split_data(self, test_size: float = 0.2, random_state: int = 42) -> tuple[pd.DataFrame, pd.DataFrame]:
