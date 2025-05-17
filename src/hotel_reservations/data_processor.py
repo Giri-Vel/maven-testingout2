@@ -29,8 +29,8 @@ class DataProcessor:
         This method handles missing values, converts data types, and performs feature engineering.
         """
         # making the dates as cyclic
-        self.df["month_sin"] = np.sin(2 * np.pi * self.df["arrival_month"] / 12)
-        self.df["month_cos"] = np.cos(2 * np.pi * self.df["arrival_month"] / 12)
+        self.df["month_as_sin"] = np.sin(2 * np.pi * self.df["arrival_month"] / 12)
+        self.df["month_as_cos"] = np.cos(2 * np.pi * self.df["arrival_month"] / 12)
         new_columns_created = ["month_as_sin", "month_as_cos"]
 
         # Handle numeric features
