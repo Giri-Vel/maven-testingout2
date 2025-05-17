@@ -29,12 +29,12 @@ class DataProcessor:
 
         This method handles missing values, converts data types, and performs feature engineering.
         """
-        
+
         # making the dates as cyclic
         self.df["month_sin"] = np.sin(2 * np.pi * self.df["arrival_month"] / 12)
         self.df["month_cos"] = np.cos(2 * np.pi * self.df["arrival_month"] / 12)
         new_columns_created = ["month_as_sin", "month_as_cos"]
-        
+
 
         # Handle numeric features
         num_features = self.config.num_features
@@ -55,9 +55,9 @@ class DataProcessor:
         # make the id columns as a string
         for col in self.id_column:
             self.df[col] = self.df[col].astype(str)
-        
 
-        
+
+
 
     def split_data(self, test_size: float = 0.2, random_state: int = 42) -> tuple[pd.DataFrame, pd.DataFrame]:
         """Split the DataFrame (self.df) into training and test sets.

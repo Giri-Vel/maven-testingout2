@@ -17,4 +17,4 @@ train_data, test_data = train_test_split(data, test_size=0.2, random_state=42)
 # save the train and test datasets to csv files
 train_data.to_csv(os.path.join('tests\catalog', 'train.csv'), index=False)
 test_data.to_csv(os.path.join('tests\catalog', 'test.csv'), index=False)
- 
+

@@ -14,5 +14,5 @@ data.drop(columns=['Booking_ID'], inplace=True)
 # create a sample of the dataset
 sample_data = data.sample(frac=0.05, random_state=42)  # 5% sample
 
-# save the sample dataset to csv file in the location test\testing_sample 
+# save the sample dataset to csv file in the location test\testing_sample
 sample_data.to_csv(os.path.join('tests\\testing_sample', 'sample_data.csv'), index=False)
