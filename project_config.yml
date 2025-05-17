@@ -8,7 +8,7 @@ dev:
   catalog_name: mlops_dev
   schema_name: hotel_res
 
-id_column: 
+id_column:
   - Booking_ID
 
 num_features:
@@ -33,5 +33,5 @@ cat_features:
   - market_segment_type
 
 
-target: 
+target:
   - booking_status
