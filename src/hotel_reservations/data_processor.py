@@ -45,7 +45,7 @@ class DataProcessor:
 
         # Extract target and relevant features
         target = self.config.target
-        relevant_columns = cat_features + num_features + [target] + self.id_column + new_columns_created
+        relevant_columns = cat_features + num_features + [target] + self.config.id_column + new_columns_created
         self.df = self.df[relevant_columns]
 
         # make the id columns as a string
