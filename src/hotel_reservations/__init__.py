@@ -1,3 +1,4 @@
+"""hotel_reservations package."""
 
 import importlib.metadata
 import importlib.resources

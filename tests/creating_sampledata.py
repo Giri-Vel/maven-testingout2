@@ -1,9 +1,9 @@
 #
 
-from sklearn.model_selection import train_test_split
+
+import os
 
 import pandas as pd
-import os
 
 # create a sample of the dataset\Hotel_Reservations.csv for testing
 # Load the dataset

@@ -2,10 +2,9 @@
 
 # -*- coding: utf-8 -*-
 
-import datetime
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import current_timestamp, to_utc_timestamp
 from sklearn.model_selection import train_test_split
@@ -29,7 +28,6 @@ class DataProcessor:
 
         This method handles missing values, converts data types, and performs feature engineering.
         """
-
         # making the dates as cyclic
         self.df["month_sin"] = np.sin(2 * np.pi * self.df["arrival_month"] / 12)
         self.df["month_cos"] = np.cos(2 * np.pi * self.df["arrival_month"] / 12)

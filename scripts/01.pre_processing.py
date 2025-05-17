@@ -1,19 +1,15 @@
-import argparse
+
 
 import yaml
 from loguru import logger
-from pyspark.sql import SparkSession
-import sys
-import os
-
-
-from hotel_reservations.config import ProjectConfig
-from hotel_reservations.data_processor import DataProcessor, generate_synthetic_data
 from marvelous.logging import setup_logging
 from marvelous.timer import Timer
+from pyspark.sql import SparkSession
 
+from hotel_reservations.config import ProjectConfig
+from hotel_reservations.data_processor import DataProcessor
 
-config_path = f"../project_config.yml"
+config_path = "../project_config.yml"
 config = ProjectConfig.from_yaml(config_path=config_path, env="dev")
 
 setup_logging(log_file=f"/Volumes/{config.catalog_name}/{config.schema_name}/logs/marvelous-1.log")
