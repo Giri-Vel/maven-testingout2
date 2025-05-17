@@ -91,7 +91,9 @@ def test_column_selection(sample_data: pd.DataFrame, config: ProjectConfig, spar
 
     new_columns_created = ["month_as_sin", "month_as_cos"]
 
-    expected_columns = config.cat_features + config.num_features + [config.target] + config.id_column + new_columns_created
+    expected_columns = (
+        config.cat_features + config.num_features + [config.target] + config.id_column + new_columns_created
+    )
     assert set(processor.df.columns) == set(expected_columns)
 
 
