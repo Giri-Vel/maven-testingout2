@@ -9,7 +9,7 @@ import pandas as pd
 # Load the dataset
 data = pd.read_csv(os.path.join("dataset", "Hotel_Reservations.csv"))
 # Drop the 'Booking_ID' column
-data.drop(columns=["Booking_ID"], inplace=True)
+# data.drop(columns=["Booking_ID"], inplace=True)
 
 # create a sample of the dataset
 sample_data = data.sample(frac=0.05, random_state=42)  # 5% sample
