@@ -8,6 +8,7 @@ dev:
   catalog_name: mlops_dev
   schema_name: giridhar
 
+
 id_column:
   - Booking_ID
 

@@ -1,3 +1,4 @@
+
 import pandas as pd
 import yaml
 from loguru import logger
@@ -7,6 +8,7 @@ from pyspark.sql import SparkSession
 
 from hotel_reservations.config import ProjectConfig
 from hotel_reservations.data_processor import DataProcessor
+
 
 config_path = "project_config.yml"
 
@@ -22,6 +24,7 @@ logger.info(yaml.dump(config, default_flow_style=False))
 # Load the hotel reservations dataset
 spark = SparkSession.builder.getOrCreate()
 
+
 # reading the dataset
 df = pd.read_csv(
     "dataset/Hotel_Reservations.csv",
@@ -34,6 +37,7 @@ df = pd.read_csv(
 #     header=True,
 #     inferSchema=True,
 # ).toPandas()
+
 
 # Preprocess the data
 with Timer() as preprocess_timer:

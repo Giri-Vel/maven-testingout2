@@ -1,5 +1,6 @@
 """Dataloader fixture."""
 
+
 import os
 import pandas as pd
 import pytest
@@ -8,6 +9,7 @@ from pyspark.sql import SparkSession
 
 from hotel_reservations import PROJECT_DIR
 from hotel_reservations.config import ProjectConfig, Tags
+
 # from tests.unit_tests.spark_config import spark_config
 
 
@@ -26,12 +28,14 @@ for var in [
 
 @pytest.fixture(scope="session")
 def spark_session(): # -> SparkSession:
+
     """Create and return a SparkSession for testing.
 
     This fixture creates a SparkSession with the specified configuration and returns it for use in tests.
     """
     # One way
     # spark = SparkSession.builder.getOrCreate()  # noqa
+
     # spark = (
     #     SparkSession.builder.master(spark_config.master)
     #     .appName(spark_config.app_name)
